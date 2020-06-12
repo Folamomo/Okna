@@ -33,7 +33,7 @@ Wynik uczenia jest zapisany w pliku "best_model.hdf5".
 
 ### Funkcja straty
 W KerasWindowsDetection.ipynb jest funkcja o nazwie my_loss. 
-Działa ona w ten sposób, że jeśli w danym miejscu powinna być wartość nonVector, a przewidziana przez model wartość jest mniejsza bądź równa jednej trzeciej wartości nonVector to zwraca błąd równy zero dla pozostałych sytuacji funkcja zwraca kwadrat różnicy wartości przewidzianej i rzeczywistej, następnie wylicza średnią ze wszystkich błędów.
+Działa ona w ten sposób, że jeśli w danym miejscu powinna być wartość nonVector, a przewidziana przez model wartość jest mniejsza bądź równa połowie wartości nonVector to zwraca błąd równy zero dla pozostałych sytuacji funkcja zwraca kwadrat różnicy wartości przewidzianej i rzeczywistej, następnie wylicza średnią ze wszystkich błędów.
 Oprócz customowej funkcji testowane były też "huber_loss", oraz "mse". W celu ich przetestowania można odkomentować odpowiednią linię "model.compile".
 Bazowo jest ustawiona funkcja "mse".
 

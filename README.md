@@ -21,6 +21,7 @@ itd.
 left{nr}.png right{nr}.png to zdjęcia kolejno z lewej i prawej kamery, a out.json to plik z danymi do tych zdjęć (nachylenie kamery oraz wektory od kamery do rogu okna)
 Zmienna nonVector określa jaką liczbę ustawimy jako brak okna, w założeniu powinna to być bardzo niska liczba (bazowo jest to -1000).
 
+Sieć jest domyślnie ustawiona na zdjęcia 1280:720
 Zdjęcia są zamieniane na czarno białe, a dane z json jest konwertowany na tablicę 3 wymiarową w postaci [Zdjęcie][Wektor][x,y,z].
 
 Po wczytaniu dane są mieszane i dzielone na zbiory uczący i treningowy.

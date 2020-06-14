@@ -1,3 +1,55 @@
+# Generacja danych
+## Przygotowanie modelu
+Modele powinny być realistycznie wyskalowane. 
+Okna powinny być połączone w 1 obiekt.
+Dla każdego okna zaznaczamy 4 wierzchołki i dodajemy je do Vertex group.
+Kamera powinna mieć wszytkie parametry ustawione jak domyślna kamera w Blenderze.
+Do renderowania używamy presetu HDTV720p
+W zakładce Scripting otwieramy nowy plik teksotwy i wklejamy do niego zawartość skrypt.py
+Otwieramy konsolę aby widzieć postępy (Windows: Window>Toggle System Console, Linux: Uruchomić Blendera z poziomu terminala)
+
+## Ustawienia parametrów skryptu
+Ustawiamy ścieżkę zapisu danych wejściowych
+```python
+#Parameters
+save_path = 'D:/Render/model7/side16/'
+```
+Wybieramy kamerę
+```python
+#camera object
+camera = bpy.data.objects["Camera"]
+```
+Podajemy nazwy Vertex grup odpowiadających widocznym oknom, od góry od dołu, od lewej do prawej
+Podajemy nazwę obiektu w którym wybrane grupy się znajduja
+```python
+selectedGroups = ["Okno5", "Okno6"]
+#object containing selected groups
+ob = bpy.data.objects["Window.002"]
+```
+Wybieramy cel kamery(najlepiej centrum budynku) i zakresy z których będziemy losować pozycję kamery
+(xmin może być mniejszy niż xmax, działa i tak)
+```python
+#Target for camera
+lookAt = Vector((0.0, 0.0, 1.0))
+#Possible camera locations
+xmin = 15.0
+xmax = 30.0
+ymin = -30.0
+ymax = -15.0
+zmin = 0.10
+zmax = 3.0
+```
+Wybieramy liczbę lokacji do wylosowania (najlepiej najpierw przetestować z 1)
+```python
+#Number of locations to render
+amount = 1
+```
+
+Niestety implementacja skryptów w Blenderze powoduje jego zawieszanie na czas działania skryptu.
+
+## Gotowe dane
+Gotowe dane i modele znajdują się w folderze https://drive.google.com/drive/folders/19oj42FEjVagk-jeRzYNcaa4z53RW0Ttw?usp=sharing
+
 # Sieć neuronowa 
 ## Dane wejściowe sieci
 Należy ustawić zmienną images_path tak żeby wskazywała na nadrzędny folder zawierający dane wejściowe. 

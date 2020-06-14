@@ -44,3 +44,6 @@ Link do modelu: https://drive.google.com/file/d/16hNsGldNptIkKIyglmbXicstbAzCLIV
 
 Można go uruchomić dla dowolnej pary zdjęć (lewa i prawa kamera), a jako wynik zwraca tablicę wektorów biegnących od kamery do rogów okna bundynku, oraz dwa parametry oznaczające nachylenie kamery.
 Uruchomienie skryptu: "python WindowDetection.py ścieżka_do_lewego_zdjęcia ścieżka_do_prawego_zdjęcia"
+
+# Dane do testowania
+https://drive.google.com/drive/folders/1X71-J7XdtrwUdXhKsMGhcZJd6FqzZDB9?usp=sharing
